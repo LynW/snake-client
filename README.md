@@ -9,8 +9,8 @@ Before you can run this client, you will need to be running the server side whic
 This is the client implementation for [snek-multiplayer](https://github.com/lighthouse-labs/snek-multiplayer). A terminal-based Snake implementation written in JavaScript (Node.js).
 
 ## Final Product
-![image.png](image.png)
-![image2.png](image2.png)
+![image.png](./images/image.png)
+![image2.png](./images/image2.png)
 
 # Instructions
 - Run the client using `node play.js`
