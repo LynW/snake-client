@@ -1,9 +1,10 @@
 const { connect } = require("./client");
 const { setupInput } = require("./input");
+const { CONNECTING_MESSAGE } = require("./variables");
 
-console.log("Connecting ...");
+console.log(CONNECTING_MESSAGE);
 
 console.log(connect, setupInput);
 
-const connection = connect()
+const connection = connect();
 setupInput(connection);

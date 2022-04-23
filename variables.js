@@ -11,7 +11,9 @@ const messages = {
   "3": "BAP",
   "4": "WOOP"
 };
-
+const INITIALS = "CW";
+const SUCCESS_MESSAGE = "Successfully connected to game server!";
+const CONNECTING_MESSAGE = "Connecting ...";
 
 module.exports = {
   IP,
@@ -21,5 +23,8 @@ module.exports = {
   MOVE_LEFT_KEY,
   MOVE_RIGHT_KEY,
   CTRL_C,
-  messages
+  messages,
+  INITIALS,
+  SUCCESS_MESSAGE,
+  CONNECTING_MESSAGE
 };
