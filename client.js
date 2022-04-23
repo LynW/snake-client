@@ -1,29 +1,30 @@
 const net = require("net");
 const {IP, PORT} = require("./variables");
 
-const connect = function () {
+const connect = function() {
+
+  console.log("BOP")
 
   const conn = net.createConnection({
     host: IP,
-    port: PORT 
+    port: PORT
   });
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
-  conn.on("connect", () => {  
+  conn.on("connect", () => {
     console.log("Successfully connected to game server!");
     conn.write("Name: CW_");
-  }); 
-
-  conn.on('data', (data) => {
-    console.log(data);
+    //conn.write("Move: up");
+    
   });
 
+  conn.on('data', (data) => {
+    console.log("Message: "+ data);
+  });
 
-  return conn;  
+  return conn;
 };
 
-connect();
-
-module.exports = connect;
+module.exports = {connect};

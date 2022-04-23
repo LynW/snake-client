@@ -5,6 +5,12 @@ const MOVE_DOWN_KEY = "s";
 const MOVE_LEFT_KEY = "a";
 const MOVE_RIGHT_KEY = "d";
 const CTRL_C = "\u0003";
+const messages = {
+  "1": "BOOP",
+  "2": "BEEP",
+  "3": "BAP",
+  "4": "WOOP"
+};
 
 
 module.exports = {
@@ -14,5 +20,6 @@ module.exports = {
   MOVE_DOWN_KEY,
   MOVE_LEFT_KEY,
   MOVE_RIGHT_KEY,
-  CTRL_C
+  CTRL_C,
+  messages
 };
