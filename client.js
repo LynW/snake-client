@@ -16,7 +16,7 @@ const connect = function() {
   });
 
   conn.on('data', (data) => {
-    console.log("Message: " + data);
+    console.log(`Message: ${data}`);
   });
 
   return conn;
