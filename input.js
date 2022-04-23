@@ -32,7 +32,6 @@ const setupInput = function(conn) {
   stdin.setEncoding("utf8");
   stdin.on("data", handleUserInput);
   stdin.resume();
-  
   return stdin;
 };
 

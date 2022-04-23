@@ -8,14 +8,11 @@ const connect = function() {
     port: PORT
   });
 
-  // interpret incoming data as text
   conn.setEncoding("utf8");
 
   conn.on("connect", () => {
     console.log(SUCCESS_MESSAGE);
-    conn.write(`Name: ${INITIALS} `);
-    //conn.write("Move: up");
-    
+    conn.write(`Name: ${INITIALS} `); 
   });
 
   conn.on('data', (data) => {
