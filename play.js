@@ -14,12 +14,12 @@ const connect = function () {
     console.log("Connected!");
   });
 
-  conn.on("data", () => {
+  conn.on("data", (data) => {
     console.log("Message: " + data);
   });
 
   conn.on("close", () => {
-    console.log("Closed!");
+    console.log("Closed connection!");
   })
 
   return conn;
