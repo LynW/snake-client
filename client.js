@@ -1,5 +1,4 @@
 const net = require("net");
-const setupInput = require("./play");
 
 // establishes a connection with the game server
 const connect = function () {
@@ -29,4 +28,4 @@ const connect = function () {
 };
 
 
-module.exports =  connect;
+module.exports = connect;
