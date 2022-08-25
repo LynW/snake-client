@@ -1,27 +1,29 @@
 const net = require("net");
+const { IP, PORT, CONNECTION_MSG, NAME, CLOSE_MSG } = require("./constants");
+
 
 // establishes a connection with the game server
 const connect = function () {
   const conn = net.createConnection({
-    host: "10.0.2.15",// IP address here,
-    port: "50541",// PORT number here,
+    host: IP,// IP address here,
+    port: PORT,// PORT number here,
   });
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
   conn.on("connect", () => {
-    console.log("Connected!");
-    conn.write("Name: CW");
+    console.log(CONNECTION_MSG);
+    conn.write(`Name: ${NAME} `);
     // setInterval(() => (conn.write("Move: down")), 100)
   });
 
   conn.on("data", (data) => {
-    console.log("Message: " + data);
+    console.log(`Message: ${data}`);
   });
 
   conn.on("close", () => {
-    console.log("Closed connection!");
+    console.log(CLOSE_MSG);
   })
 
   return conn;
