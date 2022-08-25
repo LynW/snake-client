@@ -3,6 +3,16 @@ const PORT = "50541";
 const CONNECTION_MSG = "Connected!";
 const CLOSE_MSG = "Closing connection!";
 const NAME = "CW";
+const UP = "w";
+const DOWN = "s";
+const LEFT = "a";
+const RIGHT = 'd';
+const messages = {
+  "1" : "Hello",
+  "2" : "Help Me",
+  "3" : "Go go go",
+  "4" : "Heckin"
+};
 
 
 module.exports = {
@@ -10,5 +20,10 @@ module.exports = {
   PORT,
   CONNECTION_MSG,
   NAME,
-  CLOSE_MSG
+  CLOSE_MSG,
+  UP,
+  DOWN,
+  LEFT,
+  RIGHT,
+  messages
 };
