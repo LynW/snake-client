@@ -12,6 +12,20 @@ const handleUserInput = function (key) {
   } else if (key === "d") {
     connection.write("Move: right");
   }
+
+  if(key === "1") {
+    console.log(key);
+    connection.write(`Say: Hello`);
+  } else if (key === "2") {
+    console.log(key);
+    connection.write(`Say: Beep beep`);
+  } else if (key === "3") {
+    console.log(key);
+    connection.write(`Say: Watch out`);
+  } else if (key === "4") {
+    console.log(key);
+    connection.write(`Say: Heck`);
+  }
 };
 
 const setupInput = function(conn) {
