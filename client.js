@@ -1,4 +1,6 @@
 const net = require("net");
+const setupInput = require("./play");
+
 // establishes a connection with the game server
 const connect = function () {
   const conn = net.createConnection({
@@ -12,7 +14,7 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Connected!");
     conn.write("Name: CW");
-    setInterval(() => (conn.write("Move: down")), 100)
+    // setInterval(() => (conn.write("Move: down")), 100)
   });
 
   conn.on("data", (data) => {
@@ -25,5 +27,6 @@ const connect = function () {
 
   return conn;
 };
+
 
 module.exports =  connect;
